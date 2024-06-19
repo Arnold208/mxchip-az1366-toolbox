@@ -19,6 +19,6 @@ void screen_print(char* str, LINE_NUM line);
 void screen_printn(const char* str, unsigned int str_length, LINE_NUM line);
 void screen_printl(char* str, char* str1,LINE_NUM line,LINE_NUM line1);
 void draw_youtube_logo(LINE_NUM line0, LINE_NUM line1);
-void screen_clear();
+void screenUpdate();
 
 #endif // _SCREEN_H

@@ -10,25 +10,20 @@ void screen_print(char* str, LINE_NUM line)
     ssd1306_Fill(Black);
     ssd1306_SetCursor(2, line);
     ssd1306_WriteString(str, Font_11x18, White);
+    //ssd1306_UpdateScreen();
+}
+void screenUpdate(){
     ssd1306_UpdateScreen();
 }
-
-// Add this function to screen.h
-void screen_clear()
-{
-    ssd1306_Fill(Black);
-    ssd1306_UpdateScreen();
-}
-
 
 void screen_printl(char* str, char* str1,LINE_NUM line,LINE_NUM line1)
 {
     ssd1306_Fill(Black);
-    ssd1306_SetCursor(11, line);
+    ssd1306_SetCursor(2, line);
     ssd1306_WriteString(str, Font_11x18, White);
     ssd1306_SetCursor(2, line1);
     ssd1306_WriteString(str1, Font_11x18, White);
-    ssd1306_UpdateScreen();
+   // ssd1306_UpdateScreen();
 }
 
 void screen_printn(const char* str, unsigned int str_length, LINE_NUM line)
